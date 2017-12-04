@@ -24,15 +24,22 @@ class Home extends Component {
                 <p>See some of my work below.</p>
 
                 <p className="text-small">
-                  (I'm also kind of a big deal{' '}
+                  Also, checkout my{' '}
                   <a
                     href="https://codepen.io/liamj/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    on CodePen
+                    CodePen
                   </a>{' '}
-                  😉).
+                  and{' '}
+                  <a
+                    href="https://github.com/liamjohnston/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>.
                 </p>
               </div>
               <div className="intro-img">
