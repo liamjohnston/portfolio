@@ -24,7 +24,7 @@ class Home extends Component {
                 <p>See some of my work below.</p>
 
                 <p className="text-small">
-                  Also, checkout my{' '}
+                  Also, check out my{' '}
                   <a
                     href="https://codepen.io/liamj/"
                     target="_blank"
