@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import WorkNav from './WorkNav';
 import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
+import videoWebm from '../video/kitomba-video.webm';
+import videoMp4 from '../video/kitomba-video.mp4';
 
 export default class extends React.Component {
   componentDidMount() {
@@ -39,14 +41,8 @@ export default class extends React.Component {
               <div className="flex-50 hero-video-wrap">
                 <div className="hero-video">
                   <video id="theVid" autoPlay playsInline>
-                    <source
-                      src={require('../video/kitomba-video.webm')}
-                      type="video/webm"
-                    />
-                    <source
-                      src={require('../video/kitomba-video.mp4')}
-                      type="video/mp4"
-                    />
+                    <source src={videoWebm} type="video/webm" />
+                    <source src={videoMp4} type="video/mp4" />
                   </video>
                 </div>
               </div>
@@ -71,8 +67,8 @@ export default class extends React.Component {
             <h2>What I did</h2>
             <p>
               I worked on a wide variety of systems, from desktop apps for hair
-              stylists & receptionists, onboarding flows for new customers, and
-              enterprise web apps for managers and owners. Not to mention a{' '}
+              stylists &amp; receptionists, onboarding flows for new customers,
+              and enterprise web apps for managers and owners. Not to mention a{' '}
               <Link to="/work/online-booking">booking site</Link> for salon
               customers.
             </p>
