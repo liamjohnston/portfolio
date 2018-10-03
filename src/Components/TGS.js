@@ -2,7 +2,7 @@ import React from 'react';
 import WorkNav from './WorkNav';
 import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
-
+import heroImg from '../img/tgs-hero.png';
 export default class extends React.Component {
   render() {
     return (
@@ -20,11 +20,7 @@ export default class extends React.Component {
             <div className="stars text-big mb-xl">
               &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
-            <img
-              className="hero-img"
-              src={require('../img/tgs-hero.png')}
-              alt="The Great Suspender"
-            />
+            <img className="hero-img" src={heroImg} alt="The Great Suspender" />
           </div>
         </div>
 
@@ -70,21 +66,24 @@ export default class extends React.Component {
                 rel="noopener noreferrer"
               >
                 The Guardian
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="http://www.huffingtonpost.com/2015/05/18/great-suspender-chrome_n_7307432.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 The Huffington Post
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="http://www.pcworld.com/article/3087525/software/tab-tamers-essential-chrome-extensions-for-cleaning-up-browser-clutter.html"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 PCWorld
-              </a>,{' '}
+              </a>
+              ,{' '}
               <a
                 href="https://www.lifehacker.com.au/2015/05/the-great-suspender-frees-up-memory-by-suspending-browser-tabs/"
                 target="_blank"

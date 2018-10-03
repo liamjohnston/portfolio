@@ -2,6 +2,8 @@ import React from 'react';
 import WorkNav from './WorkNav';
 import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
+import videoWebm from '../video/ob-video.webm';
+import videoMp4 from '../video/ob-video.mp4';
 
 export default class extends React.Component {
   componentDidMount() {
@@ -48,14 +50,8 @@ export default class extends React.Component {
               <div className="flex-50 hero-video-wrap">
                 <div className="hero-video">
                   <video id="theVid" autoPlay playsInline>
-                    <source
-                      src={require('../video/ob-video.webm')}
-                      type="video/webm"
-                    />
-                    <source
-                      src={require('../video/ob-video.mp4')}
-                      type="video/mp4"
-                    />
+                    <source src={videoWebm} type="video/webm" />
+                    <source src={videoMp4} type="video/mp4" />
                   </video>
                 </div>
               </div>

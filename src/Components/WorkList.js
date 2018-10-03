@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import imgTGS from '../img/teaser-tgs.jpg';
+import imgOB from '../img/teaser-ob.jpg';
+import imgKitomba from '../img/teaser-kitomba.jpg';
 
 export default () => (
   <div className="container">
     <h4 className="text-center mt-xl">Recent work</h4>
     <Link to={`/work/tgs`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">
-        <img
-          src={require('../img/teaser-tgs.jpg')}
-          alt="Screenshot of The Great Suspender"
-        />
+        <img src={imgTGS} alt="Screenshot of The Great Suspender" />
       </div>
       <div className="flex-child card-desc col-2">
         <h2>The Great Suspender</h2>
@@ -22,10 +22,7 @@ export default () => (
 
     <Link to={`/work/online-booking`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">
-        <img
-          src={require('../img/teaser-ob.jpg')}
-          alt="Screenshot of Online Booking"
-        />
+        <img src={imgOB} alt="Screenshot of Online Booking" />
       </div>
       <div className="flex-child card-desc col-2">
         <h2>Online Booking</h2>
@@ -38,10 +35,7 @@ export default () => (
 
     <Link to={`/work/kitomba`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">
-        <img
-          src={require('../img/teaser-kitomba.jpg')}
-          alt="Screenshot of Kitomba"
-        />
+        <img src={imgKitomba} alt="Screenshot of Kitomba" />
       </div>
       <div className="flex-child card-desc col-2">
         <h2>Kitomba</h2>

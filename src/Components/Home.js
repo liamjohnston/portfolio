@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import WorkList from '../Components/WorkList';
-import WorkCTA from '../Components/WorkCTA';
+import WorkList from './WorkList';
+import WorkCTA from './WorkCTA';
+import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
 
 class Home extends Component {
@@ -39,16 +40,12 @@ class Home extends Component {
                     rel="noopener noreferrer"
                   >
                     GitHub
-                  </a>.
+                  </a>
+                  .
                 </p>
               </div>
               <div className="intro-img">
-                <img
-                  src={require('../img/liam-johnston.png')}
-                  width="375"
-                  height="362"
-                  alt="Liam Johnston"
-                />
+                <img src={imgMe} width="375" height="362" alt="Liam Johnston" />
               </div>
             </div>
           </div>
@@ -66,7 +63,8 @@ class Home extends Component {
             rel="noopener noreferrer"
           >
             Gabrielle Baker
-          </a>. &nbsp;&nbsp;Site built with React.
+          </a>
+          . &nbsp;&nbsp;Site built with React.
         </p>
       </div>
     );
