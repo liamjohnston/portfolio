@@ -1,4 +1,4 @@
-$color-brand: #db4140;
+$color-brand: #dd3433;
 
 /* super lightweight custom reset */
 *,
@@ -100,6 +100,12 @@ h2 {
 .mb-xxl {
   margin-bottom: 7rem;
 }
+.u-accessible-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  left: -999px;
+}
 /* END HELPERS */
 .btn,
 .btn:visited {
@@ -130,16 +136,6 @@ a:visited {
     font-size: 1.8rem;
   }
 }
-// footer {
-//   padding: 2rem 0;
-//   font-size: 1.4rem;
-//   background: #555;
-//   color: #fff;
-// }
-// .active {
-//   font-weight: 600;
-// }
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -231,7 +227,7 @@ a.card-wrap {
   margin-bottom: 4rem;
 }
 .text-muted {
-  color: #888;
+  color: #444;
 }
 .testimonials {
   text-align: center;
@@ -250,6 +246,9 @@ a.card-wrap {
     font-size: 3rem;
     margin-bottom: 7px;
   }
+}
+.codepen-embed {
+  background: #eee;
 }
 
 .stars {

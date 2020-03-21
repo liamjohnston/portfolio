@@ -1,6 +1,6 @@
 import React from 'react';
 import WorkNav from './WorkNav';
-import WorkCTA from '../Components/WorkCTA';
+// import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import heroImg from '../img/tgs-hero.png';
 export default class extends React.Component {
@@ -10,6 +10,7 @@ export default class extends React.Component {
         <Helmet>
           <title>The Great Suspender</title>
         </Helmet>
+        <h1 className="u-accessible-text">The Great Suspender</h1>
         <WorkNav nextTitle="Online Booking" nextLink="online-booking" />
         <div className="intro-wrap bg-tgs text-center pt-xl mb-xxl">
           <div className="container">
@@ -17,7 +18,7 @@ export default class extends React.Component {
             <p className="text-big">
               &ldquo;The best extension I have ever used.&rdquo;
             </p>
-            <div className="stars text-big mb-xl">
+            <div className="stars text-big mb-xl" aria-hidden>
               &#9733;&#9733;&#9733;&#9733;&#9733;
             </div>
             <img className="hero-img" src={heroImg} alt="The Great Suspender" />
@@ -108,22 +109,30 @@ export default class extends React.Component {
 
             <div className="testimonials">
               <div className="testimonial">
-                <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div className="stars" aria-hidden>
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
                 <p>
                   I wanted to rate this extension even better than 5 stars but I
                   can't
                 </p>
               </div>
               <div className="testimonial">
-                <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div className="stars" aria-hidden>
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
                 <p>Easy to use. Works as described. Highly recommend.</p>
               </div>
               <div className="testimonial">
-                <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div className="stars" aria-hidden>
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
                 <p>One of the best things I discovered on the Internet.</p>
               </div>
               <div className="testimonial">
-                <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div className="stars" aria-hidden>
+                  &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
                 <p>It is easy to use, very clear, and works great.</p>
               </div>
             </div>
@@ -143,7 +152,7 @@ export default class extends React.Component {
             </a>
           </div>
         </div>
-        <WorkCTA />
+        {/* <WorkCTA /> */}
       </div>
     );
   }

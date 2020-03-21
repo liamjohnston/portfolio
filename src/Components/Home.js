@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 import WorkList from './WorkList';
-import WorkCTA from './WorkCTA';
+// import WorkCTA from './WorkCTA';
 import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
+import Codepens from './Codepens';
 
 class Home extends Component {
   render() {
@@ -12,20 +15,21 @@ class Home extends Component {
           <title>Liam Johnston: web developer</title>
         </Helmet>
         <div className="intro-wrap mb-xxl">
+          <h1 className="u-accessible-text">Liam Johnston, Web developer</h1>
           <div className="container">
             <div className="d-flex home-intro">
               <div className="intro-text">
                 <p>
                   <strong>Hi</strong> 👋
                 </p>
+                <p>I'm Liam, a front-end developer and UX enthusiast.</p>
                 <p>
-                  I'm Liam, a front-end developer and UX enthusiast. I love to
+                  I work at{' '}
+                  <a href="https://www.springload.co.nz">Springload</a> where I
                   make the web more usable, accessible and useful.
                 </p>
-                <p>See some of my work below.</p>
 
-                <p className="text-small">
-                  Also, check out my{' '}
+                {/* <p className="text-small">
                   <a
                     href="https://codepen.io/liamj/"
                     target="_blank"
@@ -33,7 +37,7 @@ class Home extends Component {
                   >
                     CodePen
                   </a>{' '}
-                  and{' '}
+                  /{' '}
                   <a
                     href="https://github.com/liamjohnston/"
                     target="_blank"
@@ -42,7 +46,7 @@ class Home extends Component {
                     GitHub
                   </a>
                   .
-                </p>
+                </p> */}
               </div>
               <div className="intro-img">
                 <img src={imgMe} width="375" height="362" alt="Liam Johnston" />
@@ -51,12 +55,28 @@ class Home extends Component {
           </div>
         </div>
 
-        <WorkList />
+        <div className="container">
+          <Tabs forceRenderTabPanel>
+            <TabList>
+              <Tab>Codepens</Tab>
+              <Tab>Side projects</Tab>
+              <Tab>Past work</Tab>
+            </TabList>
 
-        <WorkCTA />
+            <TabPanel>
+              <Codepens />
+            </TabPanel>
+            <TabPanel>der katalog and comic slack</TabPanel>
+            <TabPanel>
+              <WorkList />
+            </TabPanel>
+          </Tabs>
+        </div>
+
+        {/* <WorkCTA /> */}
 
         <p className="text-sm text-muted text-center mt-xl mb-xl">
-          Illustration by{' '}
+          Liam illustration by{' '}
           <a
             href="https://www.gabriellebaker.space/"
             target="_blank"
@@ -64,7 +84,6 @@ class Home extends Component {
           >
             Gabrielle Baker
           </a>
-          . &nbsp;&nbsp;Site built with React.
         </p>
       </div>
     );

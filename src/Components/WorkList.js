@@ -5,8 +5,8 @@ import imgOB from '../img/teaser-ob.jpg';
 import imgKitomba from '../img/teaser-kitomba.jpg';
 
 export default () => (
-  <div className="container">
-    <h4 className="text-center mt-xl">Recent work</h4>
+  <>
+    <h2 className="text-center mt-xl">Past work</h2>
     <Link to={`/work/tgs`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">
         <img src={imgTGS} alt="Screenshot of The Great Suspender" />
@@ -45,5 +45,5 @@ export default () => (
         </p>
       </div>
     </Link>
-  </div>
+  </>
 );

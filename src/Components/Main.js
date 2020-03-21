@@ -7,12 +7,14 @@ import OnlineBooking from './OnlineBooking';
 import Kitomba from './Kitomba';
 
 const Main = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/work/tgs" component={TGS} />
-    <Route path="/work/online-booking" component={OnlineBooking} />
-    <Route path="/work/kitomba" component={Kitomba} />
-  </Switch>
+  <main>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/work/tgs" component={TGS} />
+      <Route path="/work/online-booking" component={OnlineBooking} />
+      <Route path="/work/kitomba" component={Kitomba} />
+    </Switch>
+  </main>
 );
 
 export default Main;
