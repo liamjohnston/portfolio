@@ -1,6 +1,15 @@
 import React from 'react';
 import CodepenEmbed from './CodepenEmbed';
 
+const gridHeightS = 450;
+const gridHeightM = 500;
+const gridHeightL = 700;
+
+const TAG_NO_JS = 'No javascript';
+const TAG_CSS_GRID = 'CSS grid';
+const TAG_ANIMATION = 'Animation';
+const TAG_DUMB = 'Dumb!';
+
 export default () => (
   <>
     <p>
@@ -9,39 +18,46 @@ export default () => (
       <a href="http://www.codepen.io/liamj">the rest</a>.
     </p>
 
-    <CodepenEmbed
-      title="Breezy Windows logo"
-      penId="VdqgZK"
-      description="Pug & scss loops, grid & flex"
-      height={450}
-    />
-
-    <CodepenEmbed
-      title="Swappy radios"
-      penId="NegxNB"
-      description="One of several weird & fun radio button pens I've made"
-      height={420}
-    />
-
-    <CodepenEmbed
-      title="Click the dot"
-      penId="ELrYWd"
-      description="Some light trolling"
-      height={500}
-    />
+    <div className="grid-50">
+      <CodepenEmbed
+        title="Breezy Windows logo"
+        penId="VdqgZK"
+        description="Pug & scss loops, grid & flex"
+        height={gridHeightS}
+        tags={[TAG_NO_JS, TAG_CSS_GRID, TAG_ANIMATION]}
+      />
+      <CodepenEmbed
+        title=":placeholder-shown selector"
+        penId="vYYLGZj"
+        description="Playing with a little-known CSS property to make an accessible, JS-free search box animation."
+        height={gridHeightS}
+        tags={[TAG_NO_JS]}
+      />
+    </div>
 
     <CodepenEmbed
       title="Sunrise loop"
       penId="qPdPOp"
       description="Sometimes I see a neat thing on Dribbble and I want to see if I can make it in CSS - this is one of those neat things."
-      height={700}
+      height={gridHeightL}
+      tags={[TAG_NO_JS, TAG_ANIMATION]}
     />
 
-    <CodepenEmbed
-      title=":placeholder-shown selector"
-      penId="vYYLGZj"
-      description="Playing with a little-known CSS property to make an accessible, JS-free search box animation."
-      height={300}
-    />
+    <div className="grid-50">
+      <CodepenEmbed
+        title="Swappy radios"
+        penId="NegxNB"
+        description="One of several weird & fun radio button pens I've made"
+        height={gridHeightM}
+        tags={[TAG_ANIMATION, TAG_DUMB]}
+      />
+      <CodepenEmbed
+        title="Click the dot"
+        penId="ELrYWd"
+        description="Click the dot!"
+        height={gridHeightM}
+        tags={[TAG_DUMB]}
+      />
+    </div>
   </>
 );

@@ -6,6 +6,7 @@ import WorkList from './WorkList';
 import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
 import Codepens from './Codepens';
+import SideProjects from './SideProjects';
 
 class Home extends Component {
   render() {
@@ -66,7 +67,9 @@ class Home extends Component {
             <TabPanel>
               <Codepens />
             </TabPanel>
-            <TabPanel>der katalog and comic slack</TabPanel>
+            <TabPanel>
+              <SideProjects />
+            </TabPanel>
             <TabPanel>
               <WorkList />
             </TabPanel>
