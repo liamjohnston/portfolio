@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import WorkNav from './WorkNav';
+import WorkNav from '../Components/WorkNav';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import videoWebm from '../video/ob-video.webm';
@@ -49,7 +49,7 @@ export default () => {
                 Make a booking
               </a>
               <p className="text-sm">
-                (go ahead - this one's just a test business)
+                (go ahead, this one's just a test business)
               </p>
             </div>
             <div className="flex-50 hero-video-wrap">
@@ -79,7 +79,7 @@ export default () => {
         <div className="content-blob">
           <h2>What I did</h2>
           <p>
-            Kitomba's old booking system was dated and difficult to use - it
+            Kitomba's old booking system was dated and difficult to use — it
             wasn't mobile-friendly, and an early login step was a barrier for
             customers.
           </p>

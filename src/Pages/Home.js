@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import WorkList from './WorkList';
 // import WorkCTA from './WorkCTA';
 import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
 import Codepens from './Codepens';
 import SideProjects from './SideProjects';
+import WorkList from './WorkList';
 
 class Home extends Component {
   render() {
@@ -15,7 +15,7 @@ class Home extends Component {
         <Helmet>
           <title>Liam Johnston: web developer</title>
         </Helmet>
-        <div className="intro-wrap mb-xxl">
+        <div className="intro-wrap">
           <h1 className="u-accessible-text">Liam Johnston, Web developer</h1>
           <div className="container">
             <div className="d-flex home-intro">
@@ -60,7 +60,7 @@ class Home extends Component {
           <Tabs forceRenderTabPanel>
             <TabList>
               <Tab>Codepens</Tab>
-              <Tab>Side projects</Tab>
+              <Tab>Projects</Tab>
               <Tab>Past work</Tab>
             </TabList>
 

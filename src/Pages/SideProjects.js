@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import imgTGS from '../img/teaser-tgs.jpg';
+import imgDerKatalog from '../img/teaser-derkatalog.jpg';
+import imgComicSlack from '../img/teaser-comicslack.jpg';
+import BrowserFrame from '../Components/BrowserFrame';
 
 export default () => (
   <>
@@ -8,7 +11,7 @@ export default () => (
 
     <Link to={`/work/tgs`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">
-        <img src={imgTGS} alt="" />
+        <BrowserFrame img={imgTGS} url="thegreatsuspender.com" />
       </div>
       <div className="flex-child card-desc col-2">
         <h3 className="card__heading">The Great Suspender</h3>
@@ -26,7 +29,7 @@ export default () => (
       className="card-wrap d-flex flex-wrap"
     >
       <div className="flex-child card-img col-2">
-        <img src={imgTGS} alt="" />
+        <BrowserFrame img={imgDerKatalog} url="derkatalog.surge.sh" />
       </div>
       <div className="flex-child card-desc col-2">
         <h3 className="card__heading">Der Katalog</h3>
@@ -43,7 +46,10 @@ export default () => (
       className="card-wrap d-flex flex-wrap"
     >
       <div className="flex-child card-img col-2">
-        <img src={imgTGS} alt="" />
+        <BrowserFrame
+          img={imgComicSlack}
+          url="liamjohnston.github.io/comic-slack"
+        />
       </div>
       <div className="flex-child card-desc col-2">
         <h3 className="card__heading">Comic Slack</h3>

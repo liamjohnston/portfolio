@@ -6,7 +6,7 @@ import imgKitomba from '../img/teaser-kitomba.jpg';
 
 export default () => (
   <>
-    <h2 className="text-center mt-xl">Past work</h2>
+    {/* <h2 className="text-center mt-xl">Past work</h2> */}
 
     <Link to={`/work/online-booking`} className="card-wrap d-flex flex-wrap">
       <div className="flex-child card-img col-2">

@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkNav from './WorkNav';
+import WorkNav from '../Components/WorkNav';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import heroImg from '../img/tgs-hero.png';

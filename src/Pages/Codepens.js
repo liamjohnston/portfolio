@@ -1,5 +1,5 @@
 import React from 'react';
-import CodepenEmbed from './CodepenEmbed';
+import CodepenEmbed from '../Components/CodepenEmbed';
 
 const gridHeightS = 450;
 const gridHeightM = 500;
@@ -13,7 +13,7 @@ const TAG_DUMB = 'Dumb!';
 export default () => (
   <>
     <p>
-      If I get a good - or silly - idea for something to code, I try it out in
+      If I get a good — or silly — idea for something to code, I try it out in
       in Codepen. Check out a few below, or have a look at{' '}
       <a href="http://www.codepen.io/liamj">the rest</a>.
     </p>
@@ -38,7 +38,7 @@ export default () => (
     <CodepenEmbed
       title="Sunrise loop"
       penId="qPdPOp"
-      description="Sometimes I see a neat thing on Dribbble and I want to see if I can make it in CSS - this is one of those neat things."
+      description="Sometimes I see a neat thing on Dribbble and I want to see if I can make it in CSS. This was one of those neat things."
       height={gridHeightL}
       tags={[TAG_NO_JS, TAG_ANIMATION]}
     />

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import WorkNav from './WorkNav';
+import WorkNav from '../Components/WorkNav';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import videoWebm from '../video/kitomba-video.webm';
@@ -79,11 +79,11 @@ export default () => {
           <p>A typical day might include:</p>
           <ul>
             <li>
-              UX stuff - interviews, user testing, mockups &amp; wireframes,
+              UX stuff: interviews, user testing, mockups &amp; wireframes,
               prototypes (as in the video above), and more testing.
             </li>
             <li>
-              Front-end dev stuff - HTML, CSS, JS (both for prototyping purposes
+              Front-end dev stuff: HTML, CSS, JS (both for prototyping purposes
               and as production code).
             </li>
           </ul>
