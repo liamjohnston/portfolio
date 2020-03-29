@@ -4,11 +4,9 @@ import ScrollToTop from './ScrollToTop';
 import '../style.scss';
 
 const App = () => (
-  <>
-    <ScrollToTop>
-      <Main />
-    </ScrollToTop>
-  </>
+  <ScrollToTop>
+    <Main />
+  </ScrollToTop>
 );
 
 export default App;

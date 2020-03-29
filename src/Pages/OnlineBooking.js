@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import WorkNav from '../Components/WorkNav';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import videoWebm from '../video/ob-video.webm';
@@ -29,8 +28,6 @@ export default () => {
       <Helmet>
         <title>Online Booking</title>
       </Helmet>
-      <h1 className="u-accessible-text">Online Booking</h1>
-      <WorkNav nextTitle="Kitomba" nextLink="kitomba" />
       <div className="intro-wrap bg-ob pt-xl mb-xxl">
         <div className="container">
           <div className="d-flex flex-50-wrap">

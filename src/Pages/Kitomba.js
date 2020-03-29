@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import WorkNav from '../Components/WorkNav';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import videoWebm from '../video/kitomba-video.webm';
@@ -30,8 +29,6 @@ export default () => {
       <Helmet>
         <title>Kitomba</title>
       </Helmet>
-      <h1 className="u-accessible-text">Kitomba</h1>
-      <WorkNav nextTitle="The Great Suspender" nextLink="tgs" />
       <div className="intro-wrap bg-kitomba pt-xl mb-xxl">
         <div className="container">
           <div className="d-flex flex-50-wrap">

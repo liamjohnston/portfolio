@@ -1,15 +1,17 @@
 import React from 'react';
 
 const THEME_WITH_TABS = '39031';
-const THEME_WITHOUT_TABS = '39032';
+// const THEME_WITHOUT_TABS = '39032';
 
-const CodepenEmbed = ({ penId, title, description, height, tags }: props) => (
-  <div>
-    {/* <div className="codepen__heading-wrapper">
-      <h2 className="codepen__heading">{title}</h2> */}
-    {/* <p className="codepen__description">{description}</p> */}
-    {/* </div> */}
-
+const CodepenEmbed = ({
+  penId,
+  title,
+  description,
+  height,
+  tags,
+  hideSm,
+}: props) => (
+  <div className={hideSm ? 'hide--up-to-md' : ''}>
     <iframe
       className="codepen-embed"
       height={height}
@@ -22,8 +24,10 @@ const CodepenEmbed = ({ penId, title, description, height, tags }: props) => (
     />
     {tags && (
       <div className="tags">
-        {tags.map(tag => (
-          <div className="tags__tag">{tag}</div>
+        {tags.map((tag, i) => (
+          <div className="tags__tag" key={`tag_${penId}_${i}`}>
+            {tag}
+          </div>
         ))}
       </div>
     )}
