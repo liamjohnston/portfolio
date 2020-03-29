@@ -1,4 +1,9 @@
-$color-brand: #db4140;
+:root {
+  --brand: #dd3433;
+  --white: #fff;
+  --grey-light: #e9e9ea;
+  --grey: #aaa;
+}
 
 /* super lightweight custom reset */
 *,
@@ -52,9 +57,9 @@ h2 {
   font-size: 1.2rem;
   line-height: 1.5em;
 }
-.hero-img {
-  display: none;
-}
+// .hero-img {
+//   display: none;
+// }
 .hero-video-wrap {
   transform: translateX(-30px);
 }
@@ -100,14 +105,20 @@ h2 {
 .mb-xxl {
   margin-bottom: 7rem;
 }
+.u-accessible-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  left: -999px;
+}
 /* END HELPERS */
 .btn,
 .btn:visited {
   display: inline-block;
   padding: 0.8rem 1.2rem;
   text-decoration: none;
-  background: $color-brand;
-  color: #fff;
+  background: var(--brand);
+  color: var(--white);
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -116,7 +127,7 @@ h2 {
 }
 a,
 a:visited {
-  color: $color-brand;
+  color: var(--brand);
 }
 
 .nav {
@@ -130,16 +141,6 @@ a:visited {
     font-size: 1.8rem;
   }
 }
-// footer {
-//   padding: 2rem 0;
-//   font-size: 1.4rem;
-//   background: #555;
-//   color: #fff;
-// }
-// .active {
-//   font-weight: 600;
-// }
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -151,20 +152,21 @@ a:visited {
 
 .intro-wrap {
   overflow: hidden;
-  background: $color-brand;
-  color: #fff;
+  background: var(--brand);
+  color: var(--white);
+  margin-bottom: 40px;
   a {
-    color: #fff;
+    color: var(--white);
   }
 }
 .bg-tgs {
-  background: #5c8193;
+  background: #014bba;
 }
 .bg-ob {
-  background: #5eb84c;
+  background: #2c6422;
 }
 .bg-kitomba {
-  background: #0076bc;
+  background: #005c93;
 }
 .home-intro {
   flex-direction: column;
@@ -211,27 +213,26 @@ a:visited {
 a.card-wrap {
   text-decoration: none;
   color: #333;
-  margin: 4em 0;
-  &:hover {
-    .card-desc {
-      transform: translateX(-0.3em);
-      h2 {
-        text-decoration: underline;
-      }
-    }
-  }
+  margin: 40px 0;
 }
 .card-img {
   margin-bottom: 1.5rem;
   img {
     width: 100%;
+    display: block;
   }
+}
+.card__heading {
+  margin-top: 0;
+}
+.fake-card-link {
+  text-decoration: underline;
 }
 .content-blob {
   margin-bottom: 4rem;
 }
 .text-muted {
-  color: #888;
+  color: #444;
 }
 .testimonials {
   text-align: center;
@@ -242,20 +243,155 @@ a.card-wrap {
   margin: 2rem 0 1rem;
 }
 .testimonial {
-  background: #deeaec;
+  background: var(--grey-light);
   padding: 20px 20px 0;
   line-height: 2.4rem;
   .stars {
-    color: #5c8193;
+    color: var(--brand);
     font-size: 3rem;
     margin-bottom: 7px;
   }
+}
+.codepen-embed {
+  background: #eee;
+  width: 100%;
+}
+
+.codepen__description {
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 .stars {
   color: #fde16d;
   font-size: 3.6rem;
   letter-spacing: 3px;
+}
+
+.tags {
+  display: flex;
+}
+.tags__tag {
+  margin: 0 6px 6px 0;
+  font-size: 14px;
+  background: #555;
+  padding: 3px 7px;
+  border-radius: 3px;
+  line-height: 1;
+  color: var(--white);
+  position: relative;
+}
+
+.react-tabs__tab-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 0;
+  margin-bottom: 40px;
+}
+.react-tabs__tab {
+  text-align: center;
+  position: relative;
+  background: #f9f9f9;
+  box-shadow: 0 0 0 1px #ddd;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.react-tabs__tab--selected,
+.react-tabs__tab:focus {
+  border: 0;
+  border-radius: 0;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    background: var(--brand);
+  }
+}
+
+.browser-frame {
+  border: 2px solid var(--grey-light);
+  border-radius: 5px;
+}
+.browser-frame__top {
+  background: var(--grey-light);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+}
+.browser-frame--bottom-crop {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.browser-frame__button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.browser-frame__button--red {
+  background: rgb(242, 95, 88);
+}
+.browser-frame__button--yellow {
+  background: rgb(251, 190, 60);
+}
+.browser-frame__button--green {
+  background: rgb(88, 203, 66);
+}
+.browser-frame__address {
+  background: var(--white);
+  height: 26px;
+  border-radius: 13px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #555;
+  flex-grow: 1;
+  margin-left: 8px;
+  margin-right: 15px;
+  padding: 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.browser-frame__burger {
+  width: 17px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  height: 16px;
+  flex-shrink: 0;
+}
+.browser-frame__img {
+  display: block;
+  width: 100%;
+}
+.browser-frame__burger-line {
+  height: 3px;
+  background: var(--grey);
+}
+
+.icon-external-link {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+@media (max-width: 799px) {
+  .hide--up-to-md {
+    display: none;
+  }
 }
 
 @media (min-width: 420px) {
@@ -267,8 +403,22 @@ a.card-wrap {
   .col-2 {
     width: 50%;
   }
+
   .container {
     padding: 0 2em;
+  }
+  .card-wrap {
+    &:hover {
+      .card-desc {
+        transform: translateX(-0.3em);
+      }
+      .card__heading {
+        text-decoration: underline;
+      }
+      .fake-card-link {
+        color: var(--brand);
+      }
+    }
   }
   .card-desc {
     padding-left: 2em;
@@ -278,17 +428,21 @@ a.card-wrap {
   .card-img {
     margin-bottom: 0;
   }
-  .hero-img {
-    display: block;
-    width: 100%;
-    margin: 0 1rem;
-  }
+
+  // .hero-img {
+  //   display: block;
+  //   width: 100%;
+  //   margin: 0 1rem;
+  // }
 
   .testimonials {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 800px) {
+  .intro-wrap {
+    margin-bottom: 60px;
+  }
   .text-center-xs {
     text-align: left;
   }
@@ -307,5 +461,19 @@ a.card-wrap {
   }
   .flex-50 {
     width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-50 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: white;
   }
 }

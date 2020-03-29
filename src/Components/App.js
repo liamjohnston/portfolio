@@ -1,14 +1,12 @@
 import React from 'react';
 import Main from './Main';
 import ScrollToTop from './ScrollToTop';
-import '../style.min.css';
+import '../style.scss';
 
 const App = () => (
-  <div>
-    <ScrollToTop>
-      <Main />
-    </ScrollToTop>
-  </div>
+  <ScrollToTop>
+    <Main />
+  </ScrollToTop>
 );
 
 export default App;

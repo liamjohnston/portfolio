@@ -1,18 +1,20 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Home from './Home';
-import TGS from './TGS';
-import OnlineBooking from './OnlineBooking';
-import Kitomba from './Kitomba';
+import Home from '../Pages/Home';
+import TGS from '../Pages/TGS';
+import OnlineBooking from '../Pages/OnlineBooking';
+import Kitomba from '../Pages/Kitomba';
 
 const Main = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/work/tgs" component={TGS} />
-    <Route path="/work/online-booking" component={OnlineBooking} />
-    <Route path="/work/kitomba" component={Kitomba} />
-  </Switch>
+  <main>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/work/tgs" component={TGS} />
+      <Route path="/work/online-booking" component={OnlineBooking} />
+      <Route path="/work/kitomba" component={Kitomba} />
+    </Switch>
+  </main>
 );
 
 export default Main;
