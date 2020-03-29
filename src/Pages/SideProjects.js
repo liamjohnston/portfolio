@@ -45,7 +45,7 @@ export default () => (
         <p className="fake-card-link">
           Visit Der Katalog
           <span className="u-accessible-text"> (opens in a new window)</span>
-          <img src={iconExternal} className="icon-external-link" aria-hidden />
+          <img src={iconExternal} className="icon-external-link" alt="" />
         </p>
       </div>
     </a>
@@ -68,7 +68,7 @@ export default () => (
         <p className="fake-card-link">
           Try it out
           <span className="u-accessible-text"> (opens in a new window)</span>
-          <img src={iconExternal} className="icon-external-link" />
+          <img src={iconExternal} className="icon-external-link" alt="" />
         </p>
       </div>
     </a>

@@ -62,16 +62,16 @@ const Home = () => {
       <div className="container">
         <Tabs forceRenderTabPanel>
           <TabList>
-            <Tab>Codepens</Tab>
             <Tab>Projects</Tab>
+            <Tab>Codepens</Tab>
             <Tab>Past work</Tab>
           </TabList>
 
           <TabPanel>
-            <Codepens />
+            <SideProjects />
           </TabPanel>
           <TabPanel>
-            <SideProjects />
+            <Codepens />
           </TabPanel>
           <TabPanel>
             <WorkList />
