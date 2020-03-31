@@ -2,7 +2,7 @@ import React from 'react';
 // import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import heroImg from '../img/tgs-hero.jpg';
-import BrowserFrame from '../Components/BrowserFrame';
+import BrowserFrame from 'react-browser-frame';
 
 const TGS = () => (
   <div>
@@ -18,7 +18,11 @@ const TGS = () => (
         <div className="stars text-big mb-xl" aria-hidden>
           &#9733;&#9733;&#9733;&#9733;&#9733;
         </div>
-        <BrowserFrame img={heroImg} bottomCropped />
+        <div className="cropped-bottom">
+          <BrowserFrame>
+            <img src={heroImg} alt="" style={{ width: '100%' }} />
+          </BrowserFrame>
+        </div>
       </div>
     </div>
 

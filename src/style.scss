@@ -109,7 +109,7 @@ h2 {
   position: absolute;
   height: 1px;
   width: 1px;
-  left: -999px;
+  left: -9999px;
 }
 /* END HELPERS */
 .btn,
@@ -314,70 +314,10 @@ a.card-wrap {
   }
 }
 
-.browser-frame {
-  border: 2px solid var(--grey-light);
-  border-radius: 5px;
-}
-.browser-frame__top {
-  background: var(--grey-light);
-  height: 42px;
-  display: flex;
-  align-items: center;
-  padding: 6px 12px;
-}
-.browser-frame--bottom-crop {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.browser-frame__button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 6px;
-  flex-shrink: 0;
-}
-.browser-frame__button--red {
-  background: rgb(242, 95, 88);
-}
-.browser-frame__button--yellow {
-  background: rgb(251, 190, 60);
-}
-.browser-frame__button--green {
-  background: rgb(88, 203, 66);
-}
-.browser-frame__address {
-  background: var(--white);
-  height: 26px;
-  border-radius: 13px;
-  line-height: 26px;
-  font-size: 14px;
-  color: #555;
-  flex-grow: 1;
-  margin-left: 8px;
-  margin-right: 15px;
-  padding: 0 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.browser-frame__burger {
-  width: 17px;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: stretch;
-  height: 16px;
-  flex-shrink: 0;
-}
-.browser-frame__img {
-  display: block;
-  width: 100%;
-}
-.browser-frame__burger-line {
-  height: 3px;
-  background: var(--grey);
+// goes down slightly below hero banner section to cut the bottom off off the BrowserFrame component
+.cropped-bottom {
+  position: relative;
+  bottom: -5px;
 }
 
 .icon-external-link {
