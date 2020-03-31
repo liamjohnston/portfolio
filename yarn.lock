@@ -7723,9 +7723,9 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
-react-browser-frame@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/react-browser-frame/-/react-browser-frame-1.0.8.tgz#d4633d714226e83159d1fd2f9fc1379ea7fbbbbf"
+react-browser-frame@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-browser-frame/-/react-browser-frame-1.0.9.tgz#3ed6d325a67a032027d132d8dd6a320f246fb258"
 
 react-dev-utils@^10.2.1:
   version "10.2.1"

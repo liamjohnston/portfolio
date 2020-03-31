@@ -20,7 +20,11 @@ const TGS = () => (
         </div>
         <div className="cropped-bottom">
           <BrowserFrame>
-            <img src={heroImg} alt="" style={{ width: '100%' }} />
+            <img
+              src={heroImg}
+              alt=""
+              style={{ display: 'block', width: '100%' }}
+            />
           </BrowserFrame>
         </div>
       </div>
