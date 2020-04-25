@@ -1,17 +1,41 @@
-import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-// import WorkCTA from './WorkCTA';
+import React, { useState, useCallback } from 'react';
+import { motion, AnimateSharedLayout } from 'framer-motion';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
+// import '@reach/tabs/styles.css';
 import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
 import Codepens from './Codepens';
 import SideProjects from './SideProjects';
 import WorkList from './WorkList';
 
+console.log(
+  '%chi :)',
+  'color: red; font: 30px Comic Sans MS; font-weight: bold'
+);
+
+const tabs = [
+  {
+    title: 'Projects',
+    color: '#ea004e',
+  },
+  {
+    title: 'Codepens',
+    color: '#0078c7',
+  },
+  {
+    title: 'Past work',
+    color: '#00864f',
+  },
+];
+
 const Home = () => {
-  console.log(
-    '%cLiam was here!',
-    'color: red; font: 30pt Comic Sans MS; font-weight: bold'
+  const [selected, setSelected] = useState(0);
+
+  const handleTabsChange = useCallback(
+    (index) => {
+      setSelected(index);
+    },
+    [setSelected]
   );
 
   return (
@@ -32,25 +56,6 @@ const Home = () => {
                 I work at <a href="https://www.springload.co.nz">Springload</a>{' '}
                 where I make the web more usable, accessible and useful.
               </p>
-
-              {/* <p className="text-small">
-                  <a
-                    href="https://codepen.io/liamj/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    CodePen
-                  </a>{' '}
-                  /{' '}
-                  <a
-                    href="https://github.com/liamjohnston/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                  .
-                </p> */}
             </div>
             <div className="intro-img">
               <img src={imgMe} width="375" height="362" alt="Liam Johnston" />
@@ -60,26 +65,44 @@ const Home = () => {
       </div>
 
       <div className="container">
-        <Tabs forceRenderTabPanel>
+        <Tabs onChange={handleTabsChange}>
           <TabList>
-            <Tab>Projects</Tab>
-            <Tab>Codepens</Tab>
-            <Tab>Past work</Tab>
+            <AnimateSharedLayout>
+              {tabs.map(({ title, color }, i) => (
+                <Tab key={i}>
+                  <span
+                    className="tab__text"
+                    style={{
+                      color: i === selected ? color : '#444',
+                    }}
+                  >
+                    {title}
+                  </span>
+                  {i === selected && (
+                    <motion.div
+                      // animate
+                      layoutId="tab__underline"
+                      className="tab__underline"
+                      style={{ backgroundColor: color }}
+                    />
+                  )}
+                </Tab>
+              ))}
+            </AnimateSharedLayout>
           </TabList>
-
-          <TabPanel>
-            <SideProjects />
-          </TabPanel>
-          <TabPanel>
-            <Codepens />
-          </TabPanel>
-          <TabPanel>
-            <WorkList />
-          </TabPanel>
+          <TabPanels>
+            <TabPanel>
+              <SideProjects />
+            </TabPanel>
+            <TabPanel>
+              <Codepens />
+            </TabPanel>
+            <TabPanel>
+              <WorkList />
+            </TabPanel>
+          </TabPanels>
         </Tabs>
       </div>
-
-      {/* <WorkCTA /> */}
 
       <p className="text-sm text-muted text-center mt-xl mb-xl">
         Illustration of me by{' '}

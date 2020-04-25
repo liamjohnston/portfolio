@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// import WorkCTA from '../Components/WorkCTA';
 import { Helmet } from 'react-helmet';
 import videoWebm from '../video/kitomba-video.webm';
 import videoMp4 from '../video/kitomba-video.mp4';
@@ -18,7 +17,7 @@ export default () => {
     };
   }, []);
   //...play it again
-  const vidEnded = e => {
+  const vidEnded = (e) => {
     setTimeout(() => {
       document.querySelector('#theVid').play();
     }, 5000);
@@ -86,7 +85,6 @@ export default () => {
           </ul>
         </div>
       </div>
-      {/* <WorkCTA /> */}
     </>
   );
 };

@@ -57,7 +57,7 @@ export default () => (
       rel="noopener noreferrer"
     >
       <div className="flex-child card-img col-2">
-        <BrowserFrame url="npmjs.com/react-browser-frame" padding="60px 10px">
+        <BrowserFrame url="npmjs.com/react-browser-frame" padding="80px 10px">
           <p className="text-center">(this browser frame thingy)</p>
         </BrowserFrame>
       </div>

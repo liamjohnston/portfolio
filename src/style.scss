@@ -282,39 +282,35 @@ a.card-wrap {
   position: relative;
 }
 
-.react-tabs__tab-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+[data-reach-tab-list] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 0;
   margin-bottom: 40px;
 }
-.react-tabs__tab {
-  text-align: center;
-  position: relative;
-  background: #f9f9f9;
-  box-shadow: 0 0 0 1px #ddd;
-  line-height: 1.4;
+[data-reach-tab] {
+  font: inherit;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-}
-.react-tabs__tab--selected,
-.react-tabs__tab:focus {
-  border: 0;
-  border-radius: 0;
-  &::after {
-    content: '';
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    bottom: -1px;
-    left: 0;
-    background: var(--brand);
+  flex-direction: column;
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  &[data-selected='false']:hover {
+    color: #000;
   }
 }
+.tab__text {
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.tab__underline {
+  width: 100%;
+  height: 5px;
+}
 
-// goes down slightly below hero banner section to cut the bottom off off the BrowserFrame component
+// goes down slightly below hero banner section to cut the bottom off of the BrowserFrame component
 .cropped-bottom {
   position: relative;
   bottom: -5px;
@@ -415,5 +411,14 @@ a.card-wrap {
   body {
     background-color: #000;
     color: white;
+  }
+}
+
+// Show focus styles on links/buttons etc for 'keyboard users' only
+// This is facebook's approach.
+// Found here: https://stackoverflow.com/a/51093815/1239334
+body.using-mouse {
+  :focus {
+    outline: none !important;
   }
 }
