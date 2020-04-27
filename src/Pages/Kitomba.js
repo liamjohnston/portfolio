@@ -19,7 +19,9 @@ export default () => {
   //...play it again
   const vidEnded = (e) => {
     setTimeout(() => {
-      document.querySelector('#theVid').play();
+      if (document.querySelector('#theVid')) {
+        document.querySelector('#theVid').play();
+      }
     }, 5000);
   };
 

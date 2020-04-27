@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@reach/tabs';
+// i styled the tabs it myself, though i get a console warning about not including the styles, which seems dumb
 // import '@reach/tabs/styles.css';
 import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
@@ -28,7 +29,7 @@ const tabs = [
   },
 ];
 
-const Home = () => {
+const Home = ({ isDarkMode, handleChangeTheme }) => {
   const [selected, setSelected] = useState(0);
 
   const handleTabsChange = useCallback(
@@ -44,6 +45,24 @@ const Home = () => {
         <title>Liam Johnston: web developer</title>
       </Helmet>
       <div className="intro-wrap">
+        <label className={`toggle ${isDarkMode ? 'toggle--toggled-on' : ''}`}>
+          <span className="u-accessible-text">
+            Turn dark mode {isDarkMode ? 'off' : 'on'}
+          </span>
+          <input
+            type="checkbox"
+            className="toggle__checkbox"
+            onChange={handleChangeTheme}
+          />
+          <motion.div
+            animate
+            className={`toggle__nub ${
+              isDarkMode ? 'toggle__nub--toggled-on' : ''
+            }`}
+          />
+        </label>
+
+        {/* </div> */}
         <h1 className="u-accessible-text">Liam Johnston, Web developer</h1>
         <div className="container">
           <div className="d-flex home-intro">
@@ -73,7 +92,7 @@ const Home = () => {
                   <span
                     className="tab__text"
                     style={{
-                      color: i === selected ? color : '#444',
+                      color: i === selected ? color : 'var(--main-fg)',
                     }}
                   >
                     {title}
@@ -104,7 +123,7 @@ const Home = () => {
         </Tabs>
       </div>
 
-      <p className="text-sm text-muted text-center mt-xl mb-xl">
+      <p className="text-sm text-center mt-xl mb-xl">
         Illustration of me by{' '}
         <a
           href="https://www.gabriellebaker.space/"

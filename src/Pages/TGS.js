@@ -140,7 +140,7 @@ const TGS = () => (
             <p>It is easy to use, very clear, and works great.</p>
           </div>
         </div>
-        <p className="text-center text-muted">
+        <p className="text-center text-sm">
           &mdash; Chrome Web Store reviewers
         </p>
       </div>
