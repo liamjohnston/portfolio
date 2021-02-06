@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
 import Home from '../Pages/Home';
-import TGS from '../Pages/TGS';
 import OnlineBooking from '../Pages/OnlineBooking';
 import Kitomba from '../Pages/Kitomba';
 import '../style.scss';
@@ -60,7 +59,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/" render={HomeWithThemeProps} />
-          <Route path="/work/tgs" component={TGS} />
+          {/* <Route path="/work/tgs" component={TGS} /> */}
           <Route path="/work/online-booking" component={OnlineBooking} />
           <Route path="/work/kitomba" component={Kitomba} />
         </Switch>

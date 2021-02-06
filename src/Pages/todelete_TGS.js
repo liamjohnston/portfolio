@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import heroImg from '../img/tgs-hero.jpg';
+// import heroImg from '../img/tgs-hero.jpg';
 import BrowserFrame from 'react-browser-frame';
 
 const TGS = () => (

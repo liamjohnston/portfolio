@@ -1,30 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import BrowserFrame from 'react-browser-frame';
-import imgTGS from '../img/teaser-tgs.jpg';
+// import imgTGS from '../img/teaser-tgs.jpg';
 import iconExternal from '../img/icon-external-link.svg';
 import imgDerKatalog from '../img/teaser-derkatalog.jpg';
 import imgComicSlack from '../img/teaser-comicslack.jpg';
 
 export default () => (
   <>
-    <Link to={`/work/tgs`} className="card-wrap d-flex flex-wrap">
-      <div className="flex-child card-img col-2">
-        <BrowserFrame url="thegreatsuspender.com">
-          <img src={imgTGS} alt="" />
-        </BrowserFrame>
-      </div>
-      <div className="flex-child card-desc col-2">
-        <h2 className="card__heading">The Great Suspender</h2>
-        <p>
-          The Great Suspender is my buddy Dean Oemcke's Chrome extension, which
-          I maintain the UI for. It helps over 1.5 million active users free up
-          memory by pausing unused chrome tabs.
-        </p>
-        <p className="fake-card-link">Read more</p>
-      </div>
-    </Link>
-
     <a
       href="http://derkatalog.surge.sh/"
       className="card-wrap d-flex flex-wrap"
