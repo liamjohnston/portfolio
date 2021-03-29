@@ -7,7 +7,7 @@ import imgMe from '../img/liam-johnston.png';
 import { Helmet } from 'react-helmet';
 import Codepens from './Codepens';
 import SideProjects from './SideProjects';
-import WorkList from './WorkList';
+// import WorkList from './WorkList';
 
 console.log(
   '%chi :)',
@@ -23,10 +23,10 @@ const tabs = [
     title: 'Codepens',
     color: '#0078c7',
   },
-  {
-    title: 'Past work',
-    color: '#00864f',
-  },
+  // {
+  //   title: 'Past work',
+  //   color: '#00864f',
+  // },
 ];
 
 const Home = ({ isDarkMode, handleChangeTheme }) => {
@@ -55,7 +55,8 @@ const Home = ({ isDarkMode, handleChangeTheme }) => {
             onChange={handleChangeTheme}
           />
           <motion.div
-            animate
+            layout
+            transition={{ duration: 0.2 }}
             className={`toggle__nub ${
               isDarkMode ? 'toggle__nub--toggled-on' : ''
             }`}
@@ -99,7 +100,6 @@ const Home = ({ isDarkMode, handleChangeTheme }) => {
                   </span>
                   {i === selected && (
                     <motion.div
-                      // animate
                       layoutId="tab__underline"
                       className="tab__underline"
                       style={{ backgroundColor: color }}
@@ -116,9 +116,9 @@ const Home = ({ isDarkMode, handleChangeTheme }) => {
             <TabPanel>
               <Codepens />
             </TabPanel>
-            <TabPanel>
+            {/* <TabPanel>
               <WorkList />
-            </TabPanel>
+            </TabPanel> */}
           </TabPanels>
         </Tabs>
       </div>

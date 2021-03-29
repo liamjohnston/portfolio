@@ -14,6 +14,7 @@ const CodepenEmbed = ({
   <div className={hideSm ? 'hide--up-to-md' : ''}>
     <iframe
       className="codepen-embed"
+      loading="lazy"
       height={height}
       scrolling="no"
       title={title}
